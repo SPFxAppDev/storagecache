@@ -1,6 +1,5 @@
 import { ISessionStorageDecoratorOptions, ILocalStorageDecoratorOptions, IClearLocalStorageDecoratorOptions, IClearSessionStorageDecoratorOptions } from './options.decorators';
 import { isset, isFunction } from '@spfxappdev/utility';
-import '../../utility/functions/library/assignObject';
 import { LocalStorage, SessionStorage, StorageBase, IStorageSettings } from '../Storage';
 
 const sessionStorageDefaultSettings: IStorageSettings = SessionStorage.DefaultSettings;

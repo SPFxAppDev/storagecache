@@ -1,0 +1,2 @@
+export { sessionCache, localCache, clearSessionCache, clearLocalCache  } from './method.decorators';
+export { IClearLocalStorageDecoratorOptions, IClearSessionStorageDecoratorOptions, IClearStorageDecoratorOptions, ILocalStorageDecoratorOptions, ISessionStorageDecoratorOptions, IStorageDecoratorOptions  } from './options.decorators';

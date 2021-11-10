@@ -1,0 +1,19 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "@spfxappdev/logger": "^1.0.2",
+    "@spfxappdev/utility": "^1.0.0",
+    "parcel-bundler": "latest",
+    "typescript": "^4.3.5"
+  },
+  "source": " src/index.html",
+  "scripts": {
+    "dev": "parcel src/index.html --out-dir build/debug",
+    "build": "parcel build"
+  },
+  "name": "npm",
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
