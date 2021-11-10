@@ -1,0 +1,39 @@
+{
+  "name": "@spfxappdev/storage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prepublish": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SPFxAppDev/storagecache.git"
+  },
+  "keywords": [
+    "jscache",
+    "storage",
+    "cache",
+    "javascript cache",
+    "javascript storage",
+    "local storage",
+    "session storage",
+    "typescript storage"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SPFxAppDev/storagecache/issues"
+  },
+  "homepage": "https://github.com/SPFxAppDev/storagecache#readme",
+  "devDependencies": {
+    "@spfxappdev/logger": "^1.0.2",
+    "@spfxappdev/utility": "^1.0.0",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {}
+}
