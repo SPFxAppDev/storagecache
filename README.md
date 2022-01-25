@@ -33,4 +33,4 @@ let dataFromCache = storage.get("now");
 let dataFromCache = storage.get("now", () => { return new Date() });
 ```
 
-For examples or documentation see [GitHub repository](https://github.com/SPFxAppDev/ts-utility#readme)
+For examples or documentation see [GitHub repository](https://github.com/SPFxAppDev/storagecache#readme)
