@@ -249,7 +249,7 @@ export abstract class StorageBase {
         }
 
         for (const keyName in storageCache) {
-            if (typeof keyName === 'string' &&
+            if (typeof storageCache[keyName] === 'string' &&
                 keyName.indexOf(this.Settings.KeyPrefix) === 0 &&
                 keyName.indexOf(this.expiredCacheKeySuffix) < 0) {
                     keyArray.push(keyName);

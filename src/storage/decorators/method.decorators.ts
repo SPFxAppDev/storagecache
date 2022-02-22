@@ -154,7 +154,7 @@ function getFromStorageOrTarget<T>(storage: StorageBase, options: ILocalStorageD
     let setValueInCache: boolean = false;
 
     if (isset(storageValue)) {
-        storage.logger.log(`${propertyKey} GET from Storage`);
+        storage.logger.log(`${propertyKey} GET from Storage`, "descriptor:", descriptor);
         result = storageValue;
 
         if (!isFunction(options.convertFromCache) && typeof result === 'object' && isset(options.sourceObj)) {
@@ -168,7 +168,7 @@ function getFromStorageOrTarget<T>(storage: StorageBase, options: ILocalStorageD
             result = options.convertFromCache.call(target, result);
         }
     } else {
-        storage.logger.log(`${propertyKey} GET from Method-Logic`);
+        storage.logger.log(`${propertyKey} GET from Method-Logic`, "descriptor:", descriptor);
         setValueInCache = true;
         result = originalMethod.apply(target, ...args);
     }
@@ -204,7 +204,7 @@ function removeFromStorage(storage: StorageBase, options: IClearLocalStorageDeco
 
     let clear: boolean = true;
 
-    storage.logger.log(`${propertyKey} Remove ${options.key} from cache`);
+    storage.logger.log(`${propertyKey} Remove ${options.key} from cache`, originalMethod, descriptor);
 
     if (isFunction(options.when)) {
         storage.logger.log(`${propertyKey} Remove from cache - when function is set, get Value from method`);
