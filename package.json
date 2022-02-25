@@ -31,9 +31,10 @@
   },
   "homepage": "https://github.com/SPFxAppDev/storagecache#readme",
   "devDependencies": {
-    "@spfxappdev/logger": "^1.0.2",
-    "@spfxappdev/utility": "^1.0.2",
     "typescript": "^4.4.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@spfxappdev/logger": "latest",
+    "@spfxappdev/utility": "latest"
+  }
 }

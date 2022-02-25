@@ -6,6 +6,11 @@ npm-debug.log*
 # Dependency directories
 node_modules
 
+#parcel cache
+.cache
+build
+.parcel-cache
+
 # Build generated files
 lib
 
