@@ -334,6 +334,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#5-custom-settings" class="md-nav__link">
+    5. Custom settings
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -342,6 +349,129 @@
         <li class="md-nav__item">
   <a href="#api" class="md-nav__link">
     API
+  </a>
+  
+    <nav class="md-nav" aria-label="API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    constructor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    get
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    remove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    clear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exists" class="md-nav__link">
+    exists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getstoragekeys" class="md-nav__link">
+    getStorageKeys
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decorators" class="md-nav__link">
+    Decorators
+  </a>
+  
+    <nav class="md-nav" aria-label="Decorators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-decorators" class="md-nav__link">
+    How to use decorators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sessioncache" class="md-nav__link">
+    @sessionCache
+  </a>
+  
+    <nav class="md-nav" aria-label="@sessionCache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options-isessionstoragedecoratoroptionst" class="md-nav__link">
+    Options (ISessionStorageDecoratorOptions&lt;T&gt;)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localcache" class="md-nav__link">
+    @localCache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearsessioncache" class="md-nav__link">
+    @clearSessionCache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearlocalcache" class="md-nav__link">
+    @clearLocalCache
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clear-storage-via-url-parameters" class="md-nav__link">
+    Clear storage via URL parameters
   </a>
   
 </li>
@@ -373,12 +503,15 @@
 
 
 <h1 id="spfxappdevstorage">@spfxappdev/storage<a class="headerlink" href="#spfxappdevstorage" title="Permanent link">&para;</a></h1>
+<hr />
 <p><img alt="npm" src="https://img.shields.io/npm/v/@spfxappdev/storage" /> <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/@spfxappdev/storage" /> <img alt="npm" src="https://img.shields.io/npm/dm/@spfxappdev/storage" /></p>
 <p><code>@spfxappdev/storage</code> is a library to handle the javascript <code>localStorage</code> and <code>sessionStorage</code> in a simple way. It comes with a built-in expiration logic (per default <code>60 minutes</code>).
 It is possible to delete the entire storage or only a specific one via URL parameters. The included decorators simplify the application and keep the code short and simple, because you only have to implement the logic (of your method) itself and not the caching (see <a href="#decorators">decorators section</a>).</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<hr />
 <p><code>npm i @spfxappdev/storage</code></p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<hr />
 <p>Depending on which type of caching you want to use (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">sessionStorage</a>) you must first import the class(es).
 But regardless of the type, the logic and handling is the same for both classes.</p>
 <h3 id="1-import-the-storage-classes-into-your-project">1. import the storage class(es) into your project<a class="headerlink" href="#1-import-the-storage-classes-into-your-project" title="Permanent link">&para;</a></h3>
@@ -425,8 +558,291 @@ But regardless of the type, the logic and handling is the same for both classes.
 <li>If the storage key does not exist or the cache has expired, the <code>callback</code> function is executed. The return value of this <code>callback</code> function is used to store the <code>value</code> in the cache with the specified <code>key</code>.</li>
 </ol>
 <hr />
+<h3 id="5-custom-settings">5. Custom settings<a class="headerlink" href="#5-custom-settings" title="Permanent link">&para;</a></h3>
+<hr />
 <h2 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h2>
-<p>TBD</p>
+<hr />
+<p>The methods are the same regardless of the type of caching (<code>local</code> or <code>session</code>) you use.</p>
+<h3 id="constructor"><code>constructor</code><a class="headerlink" href="#constructor" title="Permanent link">&para;</a></h3>
+<hr />
+<blockquote>
+<p><code>constructor(customSettings?: IStorageSettings)</code></p>
+</blockquote>
+<p>When you create a new object instance, you can pass the <code>optional</code> parameter <code>customSettings</code>. See <a href="#usage">the usage section</a> on how to create a new instance or the <a href="#5-custom-settings">custom settings section</a> to pass your custom settings options.</p>
+<h3 id="set"><code>set</code><a class="headerlink" href="#set" title="Permanent link">&para;</a></h3>
+<hr />
+<blockquote>
+<p><code>set(cacheKey: string, cacheValue: any, timeToLife: number = 60)</code></p>
+</blockquote>
+<p>This method stores the passed <code>cacheValue</code> with the given <code>cacheKey</code> in the <code>localStorage</code> or <code>sessionStorage</code> container. The <code>timeToLife</code> argument is optional (default = 60 minutes) and determines when the cache should expire (in minutes). If a value with the <code>cacheKey</code> already exists, it will be overwritten with the new <code>cacheValue</code>.</p>
+<p>After the value has been set, two keys exist in the respective storage. The second one has the suffix <code>_expire</code> which contains the timestamp as a value when the cache expires.</p>
+<p>For example, if you store a value in <code>sessionStorage</code> in this way:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">sessionCache</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;mySessionStorageKey&quot;</span><span class="p">,</span> <span class="s2">&quot;mySessionStorageValue&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>The storage will then looks like thit:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SPFxAppDev_mySessionStorageKey</td>
+<td>mySessionStorageValue</td>
+</tr>
+<tr>
+<td>SPFxAppDev_mySessionStorageKey_expire</td>
+<td>1674594394115</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You can change the prefix as described in the <a href="#5-custom-settings">custom settings section</a></p>
+</div>
+<h3 id="get"><code>get</code><a class="headerlink" href="#get" title="Permanent link">&para;</a></h3>
+<hr />
+<blockquote>
+<p><code>get(cacheKey: string, delegateFunction: Function|null = null, timeToLife: number = 60)</code></p>
+</blockquote>
+<p>This method returns the stored value of the specified <code>cacheKey</code>. The <code>cacheKey</code> corresponds to the same value as specified in the <a href="#set">set method</a>. If the <code>cacheKey</code> does not exist, or the key with the suffix <code>_expired</code> does not exist, or the cache has expired AND the <code>delegateFunction</code> is passed, then this function is executed and the return value of this function is used to store the value in the specified <code>cacheKey</code>. If the <code>delegateFunction</code> is not passed and the <code>cacheKey</code> does not exist, or the key with the suffix <code>_expired</code> does not exist, or the cache has expired, <code>null</code> is returned. The <code>timeToLife</code> (in minutes) argument is also optional and is used if <code>delegateFunction</code> is passed AND the cache value is (re)set.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Each <code>cacheKey</code> is stored with a <code>KeyPrefix</code>. If different instances exist that have different <code>KeyPrefix</code> values, only the value that has exactly this <code>KeyPrefix</code> is returned. That means if there is an instance that uses <code>one</code> as <code>KeyPrefix</code> and another that uses <code>two</code> as <code>KeyPrefix</code>, when the <code>set</code> method is executed with the same <code>cacheKey</code> (e.g. <code>test</code>), two different "storage" keys will be created. So the keys <code>one_test</code> and <code>two_test</code> exist. The <code>get("test")</code> method then returns only the value corresponding to the <code>{KeyPrefixOfCurrentInstance}_{cacheKey}</code>. =&gt; <code>instanceWithPrefixOne.get('test') //RETURNS 'test with keyPrefix "one"</code> and <code>instanceWithPrefixTwo.get('test') //RETURNS 'test with keyPrefix "two"</code></p>
+</div>
+<h3 id="remove"><code>remove</code><a class="headerlink" href="#remove" title="Permanent link">&para;</a></h3>
+<hr />
+<blockquote>
+<p><code>remove(cacheKey: string)</code></p>
+</blockquote>
+<p>Removes the cached value from storage with the specified <code>cacheKey</code>. The <code>cacheKey</code> corresponds to the same value as specified in the <a href="#set">set method</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Each <code>cacheKey</code> is stored with a <code>KeyPrefix</code>. If different instances exist that have different <code>KeyPrefix</code> values, only the value that has exactly this <code>KeyPrefix</code> is removed. </p>
+</div>
+<h3 id="clear"><code>clear</code><a class="headerlink" href="#clear" title="Permanent link">&para;</a></h3>
+<hr />
+<blockquote>
+<p><code>clear()</code></p>
+</blockquote>
+<p>Removes any cached value from storage. But only the values that start with the <code>KeyPrefix</code> (=were set with this instance).</p>
+<h3 id="exists"><code>exists</code><a class="headerlink" href="#exists" title="Permanent link">&para;</a></h3>
+<hr />
+<blockquote>
+<p><code>exists(cacheKey: string)</code></p>
+</blockquote>
+<p>Checks if an item exist in storage cache with specified <code>cacheKey</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>this is the generell <code>getItem</code>-Methode of the cache store. You have to pass the <code>KeyPrefix</code> for the <code>cacheKey</code> to return the values that you stored via the <a href="#set">set method</a>. Or use the <a href="#get">get method</a> instead.</p>
+</div>
+<h3 id="getstoragekeys"><code>getStorageKeys</code><a class="headerlink" href="#getstoragekeys" title="Permanent link">&para;</a></h3>
+<hr />
+<blockquote>
+<p><code>getStorageKeys()</code></p>
+</blockquote>
+<p>Returns all <code>cacheKeys</code> as string array that start with the <code>KeyPrefix</code> but without the <code>_expired</code> keys.</p>
+<h2 id="decorators">Decorators<a class="headerlink" href="#decorators" title="Permanent link">&para;</a></h2>
+<hr />
+<p>The caching decorators are helpful if you want to achieve a lot with less code and also fast. 
+They help you to program your methods with logic only, without having to take caching into care. 
+The decorators automatically return the cached value if it exists and has not expired (without calling the logic of the method). 
+If there is nothing in the cache or the cache has expired, the logic of the method is called and the return value is automatically written to the cache.</p>
+<p>In order to better understand how decorators work, I recommend reading <a href="https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841">this article</a>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Simple definition</strong>: An ES2016 decorator is an expression which returns a function and can take a target, name and property descriptor as arguments. You apply it by prefixing the decorator with an @ character and placing this at the very top of what you are trying to decorate. Decorators can be defined for either a class, a method or a property.</p>
+</div>
+<p>Let's compare the same code <strong>without</strong> decorators and <strong>with</strong> decorators. The logic is not changed, but the result is the same:</p>
+<table>
+<tr>
+<td>
+
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Simple class WITHOUT decorators</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span>
+<span class="normal"><a href="#__codelineno-5-28">28</a></span>
+<span class="normal"><a href="#__codelineno-5-29">29</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">class</span> <span class="nx">MyExampleClass</span> <span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="k">private</span> <span class="nx">sesssionStorage</span>: <span class="kt">SessionStorage</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="kr">constructor</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>        <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SessionStorage</span><span class="p">();</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>    <span class="p">}</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>    <span class="k">public</span> <span class="nx">getDummyDataPromise</span><span class="p">()</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span> <span class="p">{</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>        <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;getDummyDataPromise START&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>        <span class="kd">const</span> <span class="nx">cacheKey</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s2">&quot;getDummyDataPromise&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>        <span class="kd">const</span> <span class="nx">cacheData</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">cacheKey</span><span class="p">);</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a>        <span class="k">if</span><span class="p">(</span><span class="nx">cacheData</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a>            <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;getDummyDataPromise get from cache&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a>            <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">cacheData</span><span class="p">);</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a>        <span class="p">}</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a>        <span class="k">return</span> <span class="ow">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a>            <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a>                <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="s2">&quot;This data is from 5s Promise&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a>                <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;getDummyDataPromise get from Promise&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a>                <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">cacheKey</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a>                <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a>            <span class="p">},</span> <span class="mf">5000</span><span class="p">);</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a>        <span class="p">});</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a>    <span class="p">}</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+
+</td>
+<td>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">(Same) Simple class WITH decorators</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">class</span> <span class="nx">MyExampleClass</span> <span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="kd">@sessionCache</span><span class="p">({</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>        <span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;getDummyDataPromise&quot;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>    <span class="p">})</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>    <span class="k">public</span> <span class="nx">getDummyDataPromise</span><span class="p">()</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span> <span class="p">{</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>        <span class="k">return</span> <span class="ow">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>            <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>                <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="s2">&quot;This data is from 5s Promise&quot;</span><span class="p">;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>                <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>            <span class="p">},</span> <span class="mf">5000</span><span class="p">);</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>        <span class="p">});</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>    <span class="p">}</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+</td>
+<tr>
+</table>
+
+<p>Needless to say, decorators save a lot of time, reduce the number of lines (29 lines vs. 14 lines (~50% less)) and improve readability.</p>
+<h3 id="how-to-use-decorators">How to use decorators<a class="headerlink" href="#how-to-use-decorators" title="Permanent link">&para;</a></h3>
+<hr />
+<p>To use the method decorators, you must set the <code>experimentalDecorators</code> property in your <code>tsconfig.json</code> to <code>true</code>.</p>
+<p>Here is a list of all available <code>method</code> decorators:</p>
+<table>
+<thead>
+<tr>
+<th>Decorator name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@sessionCache</code></td>
+<td>Return the cached value from <code>sessionStorage</code> (by the specified <code>cacheKey</code>) or store the return value of the method if the cache has expired or is not exists</td>
+</tr>
+<tr>
+<td><code>@localCache</code></td>
+<td>Return the cached value from <code>localStorage</code> (by the specified <code>cacheKey</code>) or store the return value of the method if the cache has expired or is not exists</td>
+</tr>
+<tr>
+<td><code>@clearSessionCache</code></td>
+<td>Removes the cached value from the <code>sessionStorage</code> (by the given <code>cacheKey</code>)</td>
+</tr>
+<tr>
+<td><code>@clearLocalCache</code></td>
+<td>Removes the cached value from the <code>localStorage</code> (by the given <code>cacheKey</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>In order to use the decorators, they must be imported</p>
+<div class="highlight"><span class="filename">import decorators</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">export</span> <span class="p">{</span> <span class="nx">sessionCache</span><span class="p">,</span> <span class="nx">localCache</span><span class="p">,</span> <span class="nx">clearSessionCache</span><span class="p">,</span> <span class="nx">clearLocalCache</span>  <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@spfxappdev/storage&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="sessioncache"><code>@sessionCache</code><a class="headerlink" href="#sessioncache" title="Permanent link">&para;</a></h3>
+<hr />
+<p>The</p>
+<h4 id="options-isessionstoragedecoratoroptionst">Options (<code>ISessionStorageDecoratorOptions&lt;T&gt;</code>)<a class="headerlink" href="#options-isessionstoragedecoratoroptionst" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>key</code></td>
+<td><code>string | ((...args: any[]) =&gt; string)</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timeToLife</code></td>
+<td><code>number</code></td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td><code>keyPrefix</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sourceObj&lt;T&gt;</code></td>
+<td><code>T</code></td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td><code>convertFromCache(cachedValue: any)</code></td>
+<td><code>function</code></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="localcache"><code>@localCache</code><a class="headerlink" href="#localcache" title="Permanent link">&para;</a></h3>
+<hr />
+<h3 id="clearsessioncache"><code>@clearSessionCache</code><a class="headerlink" href="#clearsessioncache" title="Permanent link">&para;</a></h3>
+<hr />
+<h3 id="clearlocalcache"><code>@clearLocalCache</code><a class="headerlink" href="#clearlocalcache" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="clear-storage-via-url-parameters">Clear storage via URL parameters<a class="headerlink" href="#clear-storage-via-url-parameters" title="Permanent link">&para;</a></h2>
+<hr />
 
               
             </article>
