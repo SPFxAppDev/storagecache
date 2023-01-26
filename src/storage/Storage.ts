@@ -3,6 +3,7 @@ import { Logger } from '@spfxappdev/logger';
 
 
 const defaultStorageSettings: IStorageSettings  = {
+    
     UrlParameter: {
         RefreshAll: 'ResetCache',
         RefreshOnly: 'ResetOnly'
@@ -15,13 +16,30 @@ const sessionStorageSettings = {...{}, ...defaultStorageSettings};
 const localStorageSettings = {...{}, ...defaultStorageSettings};
 
 export interface IStorageSettings {
+    /**
+     * Settings for clearing cache via URL parameters
+     */
     UrlParameter: IStorageUrlParameters;
+
+    /**
+     * Determines when the cache should expire (in minutes).
+     */
     DefaultTimeToLife: number;
+
+    /**
+     * The prefix that is inserted before the cacheKey
+     */
     KeyPrefix: string;
 }
 
 export interface IStorageUrlParameters {
+    /**
+     * The name of the URL parameter that should clear all stored values from the cache
+     */
     RefreshAll: string;
+    /**
+     * The name of the URL parameter that should clear one or more specified keys from the cache
+     */
     RefreshOnly: string;
 }
 

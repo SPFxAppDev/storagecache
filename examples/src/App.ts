@@ -11,6 +11,7 @@ const defaultLocalStorageSettingsOverride: IStorageSettings  = {
     KeyPrefix: 'LocalDefault_10_Minutes_'
 };
 
+
 LocalStorage.DefaultSettings = defaultLocalStorageSettingsOverride;
 
 const myCustomSettings: IStorageSettings = {...LocalStorage.DefaultSettings, ...{

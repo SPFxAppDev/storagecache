@@ -76,7 +76,7 @@ The constructor of both classes `LocalStorage` and `SessionStorage` can be given
 | Name                                  | Type                                    | Required | Description                        |  Default Value                        |
 |---------------------------------------|-----------------------------------------|----------|------------------------------------|---------------------------------------|
 | `UrlParameter`                        | `IStorageUrlParameters`                 | Yes      | Settings for clearing cache via URL parameters. See the section [Clear storage via URL parameters](#clear-storage-via-url-parameters) | `{ RefreshAll: 'ResetCache', RefreshOnly: 'ResetOnly' }` |
-| `DefaultTimeToLife`                   | `number`                                | Yes      | The `timeToLife` option is optional and determines when the cache should expire (in minutes). | `60` |
+| `DefaultTimeToLife`                   | `number`                                | Yes      | The `timeToLife` option determines when the cache should expire (in minutes). | `60` |
 | `KeyPrefix`                           | `string`                                | Yes      | The prefix that is inserted before the `cacheKey` | `SPFxAppDev_` |
 
 
