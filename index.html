@@ -699,7 +699,6 @@ But regardless of the type, the logic and handling is the same for both classes.
     author: 'SPFxAppDev'
 }</code></li>
 </ol>
-<hr />
 <h3 id="4-get-data-or-set-data-with-callback-function-if-not-available">4. Get data or set data with callback function if not available<a class="headerlink" href="#4-get-data-or-set-data-with-callback-function-if-not-available" title="Permanent link">&para;</a></h3>
 <hr />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">let</span> <span class="nx">dataFromCache</span> <span class="o">=</span> <span class="nx">localCache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;myLocalStorageKey&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
@@ -740,7 +739,7 @@ But regardless of the type, the logic and handling is the same for both classes.
 <td><code>DefaultTimeToLife</code></td>
 <td><code>number</code></td>
 <td>Yes</td>
-<td>The <code>timeToLife</code> option is optional and determines when the cache should expire (in minutes).</td>
+<td>The <code>timeToLife</code> option determines when the cache should expire (in minutes).</td>
 <td><code>60</code></td>
 </tr>
 <tr>
