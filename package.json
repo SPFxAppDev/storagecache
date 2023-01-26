@@ -24,12 +24,12 @@
     "session storage",
     "typescript storage"
   ],
-  "author": "",
+  "author": "Seryoga",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SPFxAppDev/storagecache/issues"
   },
-  "homepage": "https://github.com/SPFxAppDev/storagecache#readme",
+  "homepage": "https://spfxappdev.github.io/storagecache/",
   "devDependencies": {
     "typescript": "^4.4.4"
   },

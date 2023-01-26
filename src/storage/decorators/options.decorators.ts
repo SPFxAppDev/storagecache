@@ -1,6 +1,8 @@
 
+export type KeyFunction = ((...args: any[]) => string);
+
 export interface IStorageDecoratorOptions<T> {
-    key: string|((...args: any[]) => string);
+    key: string|KeyFunction;
     timeToLife?: number;
     keyPrefix?: string;
     sourceObj?: new () => T;
@@ -14,7 +16,7 @@ export interface ILocalStorageDecoratorOptions<T> extends IStorageDecoratorOptio
 }
 
 export interface IClearStorageDecoratorOptions {
-    key: string|((...args: any[]) => string);
+    key: string|KeyFunction;
     keyPrefix?: string;
     when?(...args: any[]): boolean;
 }

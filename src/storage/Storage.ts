@@ -45,7 +45,7 @@ export abstract class StorageBase {
 
         if (isNullOrEmpty(cacheKey)) {
             this.warn('cacheKey is required and cannot be null or empty');
-            return;
+            return null;
         }
 
         const originalCacheKey: string = cacheKey;
@@ -195,7 +195,7 @@ export abstract class StorageBase {
      * Removes item from Cache based on the Key.
      * @param {string} cacheKey The Key within the Cache.
      */
-    public remove (cacheKey: string): void {
+    public remove(cacheKey: string): void {
         this.log('remove cache with key ' + cacheKey);
         cacheKey = this.Settings.KeyPrefix + cacheKey;
         const expiresCacheKey: string = cacheKey + this.expiredCacheKeySuffix;
@@ -205,7 +205,7 @@ export abstract class StorageBase {
     /**
      * Removes every Key from the Cache/ Clears the Cache
      */
-    public clear (): void {
+    public clear(): void {
 
         const cache: Storage = this.cache;
 
@@ -239,7 +239,7 @@ export abstract class StorageBase {
     /**
      * @returns {string[]} An Array of all CacheKeys.
      */
-    public getStorageKeys (): string[] {
+    public getStorageKeys(): string[] {
         const storageCache: Storage = this.cache;
 
         const keyArray: string[] = [];
@@ -309,7 +309,6 @@ export class SessionStorage extends StorageBase {
     public static DefaultSettings: IStorageSettings = sessionStorageSettings;
 
     /**
-     * @param {IConsoleLoggingEnabled} loggingEnabled Determines wheter Console-Logging is enabled and to which degree.
      * @param {IStorageSettings} customSettings Settings like a custom Key-Prefix or the Time to Live.
      */
     public constructor(customSettings: IStorageSettings = SessionStorage.DefaultSettings) {
@@ -322,7 +321,6 @@ export class LocalStorage extends StorageBase {
     public static DefaultSettings: IStorageSettings = localStorageSettings;
 
     /**
-     * @param {IConsoleLoggingEnabled} loggingEnabled Determines wheter Console-Logging is enabled and to which degree.
      * @param {IStorageSettings} customSettings Settings like a custom Key-Prefix or the Time to Live.
      */
     public constructor(customSettings: IStorageSettings = LocalStorage.DefaultSettings) {
