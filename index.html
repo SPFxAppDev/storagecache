@@ -308,7 +308,7 @@
         
           <li class="md-nav__item">
   <a href="#1-import-the-storage-classes-into-your-project" class="md-nav__link">
-    1. import the storage class(es) into your project
+    1. Import the storage class(es) into your project
   </a>
   
 </li>
@@ -338,6 +338,40 @@
   <a href="#5-custom-settings" class="md-nav__link">
     5. Custom settings
   </a>
+  
+    <nav class="md-nav" aria-label="5. Custom settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options-istoragesettings" class="md-nav__link">
+    Options (IStorageSettings)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options-istorageurlparameters" class="md-nav__link">
+    Options (IStorageUrlParameters)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-default-settings-per-instance" class="md-nav__link">
+    Override default settings per instance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#override-default-settings-globally" class="md-nav__link">
+    Override default settings globally
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -448,6 +482,19 @@
     @localCache
   </a>
   
+    <nav class="md-nav" aria-label="@localCache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options-ilocalstoragedecoratoroptionst" class="md-nav__link">
+    Options (ILocalStorageDecoratorOptions&lt;T&gt;)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -455,12 +502,100 @@
     @clearSessionCache
   </a>
   
+    <nav class="md-nav" aria-label="@clearSessionCache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options-iclearsessionstoragedecoratoroptions" class="md-nav__link">
+    Options (IClearSessionStorageDecoratorOptions)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
   <a href="#clearlocalcache" class="md-nav__link">
     @clearLocalCache
   </a>
+  
+    <nav class="md-nav" aria-label="@clearLocalCache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options-iclearlocalstoragedecoratoroptions" class="md-nav__link">
+    Options (IClearLocalStorageDecoratorOptions)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyfunction" class="md-nav__link">
+    KeyFunction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decorator-examples" class="md-nav__link">
+    Decorator examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Decorator examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-local-cache-decorator-example" class="md-nav__link">
+    Simple local cache decorator example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-cache-decorator-with-key-prefix" class="md-nav__link">
+    Local cache decorator with key prefix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assign-properties-to-class-via-sourceobj" class="md-nav__link">
+    Assign properties to class via sourceObj
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assign-properties-to-class-via-convertfromcache-method" class="md-nav__link">
+    Assign properties to class via convertFromCache-method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear-session-cache" class="md-nav__link">
+    Clear session cache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearlocalcache-combined-with-localcache" class="md-nav__link">
+    @clearLocalCache combined with @localCache
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -473,6 +608,26 @@
   <a href="#clear-storage-via-url-parameters" class="md-nav__link">
     Clear storage via URL parameters
   </a>
+  
+    <nav class="md-nav" aria-label="Clear storage via URL parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-all-via-url" class="md-nav__link">
+    Delete all via URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-only-specific-values-via-url" class="md-nav__link">
+    Remove only specific values via URL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -514,16 +669,17 @@ It is possible to delete the entire storage or only a specific one via URL param
 <hr />
 <p>Depending on which type of caching you want to use (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">sessionStorage</a>) you must first import the class(es).
 But regardless of the type, the logic and handling is the same for both classes.</p>
-<h3 id="1-import-the-storage-classes-into-your-project">1. import the storage class(es) into your project<a class="headerlink" href="#1-import-the-storage-classes-into-your-project" title="Permanent link">&para;</a></h3>
+<h3 id="1-import-the-storage-classes-into-your-project">1. Import the storage class(es) into your project<a class="headerlink" href="#1-import-the-storage-classes-into-your-project" title="Permanent link">&para;</a></h3>
+<hr />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span> <span class="p">{</span> <span class="nx">LocalStorage</span><span class="p">,</span> <span class="nx">SessionStorage</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@spfxappdev/storage&#39;</span><span class="p">;</span>
 </code></pre></div>
-<hr />
 <h3 id="2-you-can-create-an-instance-now">2. You can create an instance now.<a class="headerlink" href="#2-you-can-create-an-instance-now" title="Permanent link">&para;</a></h3>
+<hr />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span> <span class="nx">sessionCache</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SessionStorage</span><span class="p">();</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">const</span> <span class="nx">localCache</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">LocalStorage</span><span class="p">();</span>
 </code></pre></div>
-<hr />
 <h3 id="3-setget-data">3. Set/Get Data<a class="headerlink" href="#3-setget-data" title="Permanent link">&para;</a></h3>
+<hr />
 <div class="highlight"><span class="filename">Set/Get Data Example</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">sessionCache</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;mySessionStorageKey&quot;</span><span class="p">,</span> <span class="s2">&quot;mySessionStorageValue&quot;</span><span class="p">);</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">let</span> <span class="nx">dataFromCache</span> <span class="o">=</span> <span class="nx">sessionCache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;mySessionStorageKey&quot;</span><span class="p">);</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dataFromCache</span><span class="p">);</span> <span class="c1">//RESULT: mySessionStorageValue</span>
@@ -545,6 +701,7 @@ But regardless of the type, the logic and handling is the same for both classes.
 </ol>
 <hr />
 <h3 id="4-get-data-or-set-data-with-callback-function-if-not-available">4. Get data or set data with callback function if not available<a class="headerlink" href="#4-get-data-or-set-data-with-callback-function-if-not-available" title="Permanent link">&para;</a></h3>
+<hr />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">let</span> <span class="nx">dataFromCache</span> <span class="o">=</span> <span class="nx">localCache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;myLocalStorageKey&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="c1">//Note: (1) </span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="k">return</span> <span class="p">{</span>
@@ -557,9 +714,122 @@ But regardless of the type, the logic and handling is the same for both classes.
 <ol>
 <li>If the storage key does not exist or the cache has expired, the <code>callback</code> function is executed. The return value of this <code>callback</code> function is used to store the <code>value</code> in the cache with the specified <code>key</code>.</li>
 </ol>
-<hr />
 <h3 id="5-custom-settings">5. Custom settings<a class="headerlink" href="#5-custom-settings" title="Permanent link">&para;</a></h3>
 <hr />
+<p>The constructor of both classes <code>LocalStorage</code> and <code>SessionStorage</code> can be given additional configuration options.</p>
+<h4 id="options-istoragesettings">Options (<code>IStorageSettings</code>)<a class="headerlink" href="#options-istoragesettings" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UrlParameter</code></td>
+<td><code>IStorageUrlParameters</code></td>
+<td>Yes</td>
+<td>Settings for clearing cache via URL parameters. See the section <a href="#clear-storage-via-url-parameters">Clear storage via URL parameters</a></td>
+<td><code>{ RefreshAll: 'ResetCache', RefreshOnly: 'ResetOnly' }</code></td>
+</tr>
+<tr>
+<td><code>DefaultTimeToLife</code></td>
+<td><code>number</code></td>
+<td>Yes</td>
+<td>The <code>timeToLife</code> option is optional and determines when the cache should expire (in minutes).</td>
+<td><code>60</code></td>
+</tr>
+<tr>
+<td><code>KeyPrefix</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>The prefix that is inserted before the <code>cacheKey</code></td>
+<td><code>SPFxAppDev_</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="options-istorageurlparameters">Options (<code>IStorageUrlParameters</code>)<a class="headerlink" href="#options-istorageurlparameters" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RefreshAll</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>The name of the URL parameter that should clear all stored values from the cache</td>
+</tr>
+<tr>
+<td><code>RefreshOnly</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>The name of the URL parameter that should clear one or more specified keys from the cache</td>
+</tr>
+</tbody>
+</table>
+<h4 id="override-default-settings-per-instance">Override default settings per instance<a class="headerlink" href="#override-default-settings-per-instance" title="Permanent link">&para;</a></h4>
+<hr />
+<p>If you want to override the default settings per instance, you can do it like this:</p>
+<div class="highlight"><span class="filename">Override default settings per instance</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">const</span> <span class="nx">sessionCache</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SessionStorage</span><span class="p">({</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="nx">UrlParameter</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        <span class="nx">RefreshAll</span><span class="o">:</span> <span class="s1">&#39;ResetCacheSession&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        <span class="nx">RefreshOnly</span><span class="o">:</span> <span class="s1">&#39;ResetSessionOnly&#39;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="p">},</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="nx">DefaultTimeToLife</span>: <span class="kt">30</span><span class="p">,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="nx">KeyPrefix</span><span class="o">:</span> <span class="s1">&#39;SPFxAppDevSession_&#39;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">});</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="kd">const</span> <span class="nx">localCache</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">LocalStorage</span><span class="p">({</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="nx">UrlParameter</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        <span class="nx">RefreshAll</span><span class="o">:</span> <span class="s1">&#39;ResetCacheLocal&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        <span class="nx">RefreshOnly</span><span class="o">:</span> <span class="s1">&#39;ResetLocalOnly&#39;</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="p">},</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="nx">DefaultTimeToLife</span>: <span class="kt">120</span><span class="p">,</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="nx">KeyPrefix</span>: <span class="kt">LocalStorage.DefaultSettings.KeyPrefix</span> <span class="c1">// (1)</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="p">});</span>
+</code></pre></div>
+<ol>
+<li>Use the default value of <code>LocalStorage</code> if you do not want to overwrite it</li>
+</ol>
+<h4 id="override-default-settings-globally">Override default settings globally<a class="headerlink" href="#override-default-settings-globally" title="Permanent link">&para;</a></h4>
+<hr />
+<p>If you want to override the default settings, you can do it like this:</p>
+<div class="highlight"><span class="filename">Override default settings globally</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">const</span> <span class="nx">defaultLocalStorageSettingsOverride</span>: <span class="kt">IStorageSettings</span>  <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="nx">UrlParameter</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        <span class="nx">RefreshAll</span><span class="o">:</span> <span class="s1">&#39;ResetCacheLocal&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        <span class="nx">RefreshOnly</span><span class="o">:</span> <span class="s1">&#39;ResetLocalOnly&#39;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="p">},</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="nx">DefaultTimeToLife</span>: <span class="kt">120</span><span class="p">,</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="nx">KeyPrefix</span><span class="o">:</span> <span class="s1">&#39;SPFxAppDevLocal_&#39;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">};</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nx">LocalStorage</span><span class="p">.</span><span class="nx">DefaultSettings</span> <span class="o">=</span> <span class="nx">defaultLocalStorageSettingsOverride</span><span class="p">;</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="c1">// (1)</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="kd">const</span> <span class="nx">defaultSessionStorageSettingsOverride</span>: <span class="kt">IStorageSettings</span> <span class="o">=</span> <span class="p">{...</span><span class="nx">SessionStorage</span><span class="p">.</span><span class="nx">DefaultSettings</span><span class="p">,</span> <span class="p">...{</span> 
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="nx">KeyPrefix</span><span class="o">:</span> <span class="s2">&quot;SPFxAppDevSession_&quot;</span><span class="p">,</span> 
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    <span class="nx">DefaultTimeToLife</span>: <span class="kt">5</span><span class="p">,</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="p">}};</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="nx">SessionStorage</span><span class="p">.</span><span class="nx">DefaultSettings</span> <span class="o">=</span> <span class="nx">defaultSessionStorageSettingsOverride</span><span class="p">;</span>
+</code></pre></div>
+<ol>
+<li>Use the spread operator to override only some options</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This only works if the settings were overwritten first and then the instances were created. Also, you then have to make sure that the overwritten code is imported everywhere (e.g. in the <code>boot</code> file).</p>
+</div>
 <h2 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h2>
 <hr />
 <p>The methods are the same regardless of the type of caching (<code>local</code> or <code>session</code>) you use.</p>
@@ -577,9 +847,9 @@ But regardless of the type, the logic and handling is the same for both classes.
 <p>This method stores the passed <code>cacheValue</code> with the given <code>cacheKey</code> in the <code>localStorage</code> or <code>sessionStorage</code> container. The <code>timeToLife</code> argument is optional (default = 60 minutes) and determines when the cache should expire (in minutes). If a value with the <code>cacheKey</code> already exists, it will be overwritten with the new <code>cacheValue</code>.</p>
 <p>After the value has been set, two keys exist in the respective storage. The second one has the suffix <code>_expire</code> which contains the timestamp as a value when the cache expires.</p>
 <p>For example, if you store a value in <code>sessionStorage</code> in this way:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">sessionCache</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;mySessionStorageKey&quot;</span><span class="p">,</span> <span class="s2">&quot;mySessionStorageValue&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">sessionCache</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;mySessionStorageKey&quot;</span><span class="p">,</span> <span class="s2">&quot;mySessionStorageValue&quot;</span><span class="p">);</span>
 </code></pre></div>
-<p>The storage will then looks like thit:</p>
+<p>The storage will then looks like this:</p>
 <table>
 <thead>
 <tr>
@@ -602,6 +872,10 @@ But regardless of the type, the logic and handling is the same for both classes.
 <p class="admonition-title">Info</p>
 <p>You can change the prefix as described in the <a href="#5-custom-settings">custom settings section</a></p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When objects are stored in the storage, they are serialized via <code>JSON.stringify()</code>. This means that all <code>methods</code> and <code>properties</code> that only have a <code>getter</code> will not be stored. In reverse it means that in <code>storage.get()</code> these <code>methods</code> and <code>getter</code> properties are also not present. </p>
+</div>
 <h3 id="get"><code>get</code><a class="headerlink" href="#get" title="Permanent link">&para;</a></h3>
 <hr />
 <blockquote>
@@ -611,6 +885,10 @@ But regardless of the type, the logic and handling is the same for both classes.
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Each <code>cacheKey</code> is stored with a <code>KeyPrefix</code>. If different instances exist that have different <code>KeyPrefix</code> values, only the value that has exactly this <code>KeyPrefix</code> is returned. That means if there is an instance that uses <code>one</code> as <code>KeyPrefix</code> and another that uses <code>two</code> as <code>KeyPrefix</code>, when the <code>set</code> method is executed with the same <code>cacheKey</code> (e.g. <code>test</code>), two different "storage" keys will be created. So the keys <code>one_test</code> and <code>two_test</code> exist. The <code>get("test")</code> method then returns only the value corresponding to the <code>{KeyPrefixOfCurrentInstance}_{cacheKey}</code>. =&gt; <code>instanceWithPrefixOne.get('test') //RETURNS 'test with keyPrefix "one"</code> and <code>instanceWithPrefixTwo.get('test') //RETURNS 'test with keyPrefix "two"</code></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When objects are stored in the storage, they are serialized via <code>JSON.stringify()</code>. This means that all methods and <code>properties</code> that only have a <code>getter</code> will not be stored. In reverse it means that in <code>storage.get()</code> these methods and <code>getter</code> properties are also not present.</p>
 </div>
 <h3 id="remove"><code>remove</code><a class="headerlink" href="#remove" title="Permanent link">&para;</a></h3>
 <hr />
@@ -660,95 +938,95 @@ If there is nothing in the cache or the cache has expired, the logic of the meth
 <tr>
 <td>
 
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Simple class WITHOUT decorators</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-5-10">10</a></span>
-<span class="normal"><a href="#__codelineno-5-11">11</a></span>
-<span class="normal"><a href="#__codelineno-5-12">12</a></span>
-<span class="normal"><a href="#__codelineno-5-13">13</a></span>
-<span class="normal"><a href="#__codelineno-5-14">14</a></span>
-<span class="normal"><a href="#__codelineno-5-15">15</a></span>
-<span class="normal"><a href="#__codelineno-5-16">16</a></span>
-<span class="normal"><a href="#__codelineno-5-17">17</a></span>
-<span class="normal"><a href="#__codelineno-5-18">18</a></span>
-<span class="normal"><a href="#__codelineno-5-19">19</a></span>
-<span class="normal"><a href="#__codelineno-5-20">20</a></span>
-<span class="normal"><a href="#__codelineno-5-21">21</a></span>
-<span class="normal"><a href="#__codelineno-5-22">22</a></span>
-<span class="normal"><a href="#__codelineno-5-23">23</a></span>
-<span class="normal"><a href="#__codelineno-5-24">24</a></span>
-<span class="normal"><a href="#__codelineno-5-25">25</a></span>
-<span class="normal"><a href="#__codelineno-5-26">26</a></span>
-<span class="normal"><a href="#__codelineno-5-27">27</a></span>
-<span class="normal"><a href="#__codelineno-5-28">28</a></span>
-<span class="normal"><a href="#__codelineno-5-29">29</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">class</span> <span class="nx">MyExampleClass</span> <span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="k">private</span> <span class="nx">sesssionStorage</span>: <span class="kt">SessionStorage</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="kr">constructor</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>        <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SessionStorage</span><span class="p">();</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a>    <span class="p">}</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a>    <span class="k">public</span> <span class="nx">getDummyDataPromise</span><span class="p">()</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span> <span class="p">{</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a>        <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;getDummyDataPromise START&quot;</span><span class="p">);</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a>        <span class="kd">const</span> <span class="nx">cacheKey</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s2">&quot;getDummyDataPromise&quot;</span><span class="p">;</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a>        <span class="kd">const</span> <span class="nx">cacheData</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">cacheKey</span><span class="p">);</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a>        <span class="k">if</span><span class="p">(</span><span class="nx">cacheData</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a>            <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;getDummyDataPromise get from cache&quot;</span><span class="p">);</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a>            <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">cacheData</span><span class="p">);</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a>        <span class="p">}</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a>        <span class="k">return</span> <span class="ow">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a>            <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a>                <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="s2">&quot;This data is from 5s Promise&quot;</span><span class="p">;</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a>                <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;getDummyDataPromise get from Promise&quot;</span><span class="p">);</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24"></a>                <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">cacheKey</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25"></a>                <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26"></a>            <span class="p">},</span> <span class="mf">5000</span><span class="p">);</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27"></a>        <span class="p">});</span>
-<a id="__codelineno-5-28" name="__codelineno-5-28"></a>    <span class="p">}</span>
-<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="p">}</span>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Simple class WITHOUT decorators</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span>
+<span class="normal"><a href="#__codelineno-7-28">28</a></span>
+<span class="normal"><a href="#__codelineno-7-29">29</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">class</span> <span class="nx">MyExampleClass</span> <span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>    <span class="k">private</span> <span class="nx">sesssionStorage</span>: <span class="kt">SessionStorage</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>    <span class="kr">constructor</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>        <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SessionStorage</span><span class="p">();</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>    <span class="p">}</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>    <span class="k">public</span> <span class="nx">getDummyDataPromise</span><span class="p">()</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span> <span class="p">{</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>        <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;getDummyDataPromise START&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>        <span class="kd">const</span> <span class="nx">cacheKey</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s2">&quot;getDummyDataPromise&quot;</span><span class="p">;</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>        <span class="kd">const</span> <span class="nx">cacheData</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">cacheKey</span><span class="p">);</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a>        <span class="k">if</span><span class="p">(</span><span class="nx">cacheData</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a>            <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;getDummyDataPromise get from cache&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a>            <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">cacheData</span><span class="p">);</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a>        <span class="p">}</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a>        <span class="k">return</span> <span class="ow">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a>            <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a>                <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="s2">&quot;This data is from 5s Promise&quot;</span><span class="p">;</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a>                <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;getDummyDataPromise get from Promise&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a>                <span class="k">this</span><span class="p">.</span><span class="nx">sesssionStorage</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">cacheKey</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a>                <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26"></a>            <span class="p">},</span> <span class="mf">5000</span><span class="p">);</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a>        <span class="p">});</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a>    <span class="p">}</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29"></a><span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 
 </td>
 <td>
-<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">(Same) Simple class WITH decorators</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-6-10">10</a></span>
-<span class="normal"><a href="#__codelineno-6-11">11</a></span>
-<span class="normal"><a href="#__codelineno-6-12">12</a></span>
-<span class="normal"><a href="#__codelineno-6-13">13</a></span>
-<span class="normal"><a href="#__codelineno-6-14">14</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">class</span> <span class="nx">MyExampleClass</span> <span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="kd">@sessionCache</span><span class="p">({</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>        <span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;getDummyDataPromise&quot;</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>    <span class="p">})</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>    <span class="k">public</span> <span class="nx">getDummyDataPromise</span><span class="p">()</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span> <span class="p">{</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>        <span class="k">return</span> <span class="ow">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a>            <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a>                <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="s2">&quot;This data is from 5s Promise&quot;</span><span class="p">;</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a>                <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a>            <span class="p">},</span> <span class="mf">5000</span><span class="p">);</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a>        <span class="p">});</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a>    <span class="p">}</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="p">}</span>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">(Same) Simple class WITH decorators</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">class</span> <span class="nx">MyExampleClass</span> <span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="kd">@sessionCache</span><span class="p">({</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>        <span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;getDummyDataPromise&quot;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>    <span class="p">})</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>    <span class="k">public</span> <span class="nx">getDummyDataPromise</span><span class="p">()</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span> <span class="p">{</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>        <span class="k">return</span> <span class="ow">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>            <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>                <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="s2">&quot;This data is from 5s Promise&quot;</span><span class="p">;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>                <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>            <span class="p">},</span> <span class="mf">5000</span><span class="p">);</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>        <span class="p">});</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a>    <span class="p">}</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
 </td>
@@ -758,7 +1036,10 @@ If there is nothing in the cache or the cache has expired, the logic of the meth
 <p>Needless to say, decorators save a lot of time, reduce the number of lines (29 lines vs. 14 lines (~50% less)) and improve readability.</p>
 <h3 id="how-to-use-decorators">How to use decorators<a class="headerlink" href="#how-to-use-decorators" title="Permanent link">&para;</a></h3>
 <hr />
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>To use the method decorators, you must set the <code>experimentalDecorators</code> property in your <code>tsconfig.json</code> to <code>true</code>.</p>
+</div>
 <p>Here is a list of all available <code>method</code> decorators:</p>
 <table>
 <thead>
@@ -787,11 +1068,11 @@ If there is nothing in the cache or the cache has expired, the logic of the meth
 </tbody>
 </table>
 <p>In order to use the decorators, they must be imported</p>
-<div class="highlight"><span class="filename">import decorators</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">export</span> <span class="p">{</span> <span class="nx">sessionCache</span><span class="p">,</span> <span class="nx">localCache</span><span class="p">,</span> <span class="nx">clearSessionCache</span><span class="p">,</span> <span class="nx">clearLocalCache</span>  <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@spfxappdev/storage&#39;</span><span class="p">;</span>
+<div class="highlight"><span class="filename">import decorators</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">export</span> <span class="p">{</span> <span class="nx">sessionCache</span><span class="p">,</span> <span class="nx">localCache</span><span class="p">,</span> <span class="nx">clearSessionCache</span><span class="p">,</span> <span class="nx">clearLocalCache</span>  <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@spfxappdev/storage&#39;</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="sessioncache"><code>@sessionCache</code><a class="headerlink" href="#sessioncache" title="Permanent link">&para;</a></h3>
 <hr />
-<p>The</p>
+<p>The <code>storageCache</code> decorator stores the returned value of the method in the <code>sessionStorage</code> with the specified <code>key</code>. The code of the method is executed only if the cache has expired or does not exist. Additional <a href="#options-isessionstoragedecoratoroptionst">options</a> can be passed to the decorator.</p>
 <h4 id="options-isessionstoragedecoratoroptionst">Options (<code>ISessionStorageDecoratorOptions&lt;T&gt;</code>)<a class="headerlink" href="#options-isessionstoragedecoratoroptionst" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -800,49 +1081,590 @@ If there is nothing in the cache or the cache has expired, the logic of the meth
 <th>Type</th>
 <th>Required</th>
 <th>Description</th>
+<th>Default Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>key</code></td>
-<td><code>string | ((...args: any[]) =&gt; string)</code></td>
+<td><code>string | KeyFunction</code></td>
 <td>Yes</td>
-<td></td>
+<td>A <code>cacheKey</code> as a <code>string</code> to be used for storage. Or <code>KeyFunction</code>, a <code>function</code> that returns a <code>string</code>. <a href="#keyfunction">Here</a> you can find more information about this function.</td>
+<td>-</td>
 </tr>
 <tr>
 <td><code>timeToLife</code></td>
 <td><code>number</code></td>
 <td>No</td>
-<td></td>
+<td>The <code>timeToLife</code> option is optional and determines when the cache should expire (in minutes).</td>
+<td><code>SessionStorage.DefaultSettings.DefaultTimeToLife</code> see <a href="#5-custom-settings">here</a></td>
 </tr>
 <tr>
 <td><code>keyPrefix</code></td>
 <td><code>string</code></td>
 <td>No</td>
-<td></td>
+<td>The prefix that is inserted before the <code>cacheKey</code></td>
+<td><code>SessionStorage.DefaultSettings.KeyPrefix</code> see <a href="#5-custom-settings">here</a></td>
 </tr>
 <tr>
 <td><code>sourceObj&lt;T&gt;</code></td>
 <td><code>T</code></td>
 <td>No</td>
-<td></td>
+<td>If <code>convertFromCache</code> option is not set but <code>sourceObj</code> is, a new instance of <code>T</code> is created (=&gt; parameterless <code>public costructor()</code> needed). After that all properties are set via <code>Object.assign</code>. <a href="#assign-properties-to-class-via-sourceobj">See samples</a></td>
+<td>-</td>
 </tr>
 <tr>
 <td><code>convertFromCache(cachedValue: any)</code></td>
 <td><code>function</code></td>
 <td>No</td>
-<td></td>
+<td>When objects are stored in the storage, they are serialized via <code>JSON.stringify()</code>. This means that all methods and <code>properties</code> that only have a <code>getter</code> will not be stored. In reverse it means that in <code>storage.get()</code> these methods and <code>getter</code> properties are also not present. If these methods and properties are to be returned, you can implement your own logic through this function that converts the cached value to the required object. <a href="#assign-properties-to-class-via-convertfromcache-method">See samples</a></td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
 <h3 id="localcache"><code>@localCache</code><a class="headerlink" href="#localcache" title="Permanent link">&para;</a></h3>
 <hr />
+<p>The <code>localCache</code> decorator stores the returned value of the method in the <code>localStorage</code> with the specified <code>key</code>. The code of the method is executed only if the cache has expired or does not exist. Additional <a href="#options-ilocalstoragedecoratoroptionst">options</a> can be passed to the decorator.</p>
+<h4 id="options-ilocalstoragedecoratoroptionst">Options (<code>ILocalStorageDecoratorOptions&lt;T&gt;</code>)<a class="headerlink" href="#options-ilocalstoragedecoratoroptionst" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>key</code></td>
+<td><code>string | KeyFunction</code></td>
+<td>Yes</td>
+<td>A <code>cacheKey</code> as a <code>string</code> to be used for storage. Or <code>KeyFunction</code>, a <code>function</code> that returns a <code>string</code>. <a href="#keyfunction">Here</a> you can find more information about this function.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>timeToLife</code></td>
+<td><code>number</code></td>
+<td>No</td>
+<td>The <code>timeToLife</code> option is optional and determines when the cache should expire (in minutes).</td>
+<td><code>LocalStorage.DefaultSettings.DefaultTimeToLife</code> see <a href="#5-custom-settings">here</a></td>
+</tr>
+<tr>
+<td><code>keyPrefix</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>The prefix that is inserted before the <code>cacheKey</code></td>
+<td><code>LocalStorage.DefaultSettings.KeyPrefix</code> see <a href="#5-custom-settings">here</a></td>
+</tr>
+<tr>
+<td><code>sourceObj&lt;T&gt;</code></td>
+<td><code>T</code></td>
+<td>No</td>
+<td>If <code>convertFromCache</code> option is not set but <code>sourceObj</code> is, a new instance of <code>T</code> is created (=&gt; parameterless <code>public costructor()</code> needed). After that all properties are set via <code>Object.assign</code>. <a href="#assign-properties-to-class-via-sourceobj">See samples</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>convertFromCache(cachedValue: any)</code></td>
+<td><code>function</code></td>
+<td>No</td>
+<td>When objects are stored in the storage, they are serialized via <code>JSON.stringify()</code>. This means that all methods and <code>properties</code> that only have a <code>getter</code> will not be stored. In reverse it means that in <code>storage.get()</code> these methods and <code>getter</code> properties are also not present. If these methods and properties are to be returned, you can implement your own logic through this function that converts the cached value to the required object. <a href="#assign-properties-to-class-via-convertfromcache-method">See samples</a></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 <h3 id="clearsessioncache"><code>@clearSessionCache</code><a class="headerlink" href="#clearsessioncache" title="Permanent link">&para;</a></h3>
 <hr />
+<p>With the <code>clearSessionCache</code> decorator a value with the given <code>key</code> can be removed from the <code>sessionStorage</code>. Additional <a href="#options-ilocalstoragedecoratoroptionst">options</a> can be passed to the decorator.</p>
+<h4 id="options-iclearsessionstoragedecoratoroptions">Options (<code>IClearSessionStorageDecoratorOptions</code>)<a class="headerlink" href="#options-iclearsessionstoragedecoratoroptions" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>key</code></td>
+<td><code>string | KeyFunction</code></td>
+<td>Yes</td>
+<td>The <code>cacheKey</code> (without <code>keyPrefix</code>) that should be removed from the storage. The <code>key</code> can be a <code>string</code> or <code>KeyFunction</code> (a <code>function</code> that returns a <code>string</code>) <a href="#keyfunction">Here</a> you can find more information about this function.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>keyPrefix</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>The prefix that is inserted before the <code>cacheKey</code></td>
+<td><code>SessionStorage.DefaultSettings.KeyPrefix</code> see <a href="#5-custom-settings">here</a></td>
+</tr>
+<tr>
+<td><code>when</code></td>
+<td><code>function</code></td>
+<td>No</td>
+<td><code>when</code> is an optional <code>function</code> which expects a <code>boolean</code> as return value. If <code>true</code> is returned, the <code>cacheKey</code> will be removed from the storage, otherwise not. In the function the <code>this.</code>-pointer can be used to access the class instance. In addition, all other passing parameters of the method to which the decorator is applied are also present (Exactly the same as with the <a href="#keyfunction">KeyFunction</a> or <a href="#clearlocalcache-combined-with-localcache">see samples</a>).</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 <h3 id="clearlocalcache"><code>@clearLocalCache</code><a class="headerlink" href="#clearlocalcache" title="Permanent link">&para;</a></h3>
 <hr />
+<p>With the <code>clearLocalCache</code> decorator a value with the given <code>key</code> can be removed from the <code>localStorage</code>. Additional <a href="#options-iclearlocalstoragedecoratoroptions">options</a> can be passed to the decorator.</p>
+<h4 id="options-iclearlocalstoragedecoratoroptions">Options (<code>IClearLocalStorageDecoratorOptions</code>)<a class="headerlink" href="#options-iclearlocalstoragedecoratoroptions" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>key</code></td>
+<td><code>string | KeyFunction</code></td>
+<td>Yes</td>
+<td>The <code>cacheKey</code> (without <code>keyPrefix</code>) that should be removed from the storage. The <code>key</code> can be a <code>string</code> or <code>KeyFunction</code> (a <code>function</code> that returns a <code>string</code>) <a href="#keyfunction">Here</a> you can find more information about this function.</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>keyPrefix</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>The prefix that is inserted before the <code>cacheKey</code></td>
+<td><code>LocalStorage.DefaultSettings.KeyPrefix</code> see <a href="#5-custom-settings">here</a></td>
+</tr>
+<tr>
+<td><code>when</code></td>
+<td><code>function</code></td>
+<td>No</td>
+<td><code>when</code> is an optional <code>function</code> which expects a <code>boolean</code> as return value. If <code>true</code> is returned, the <code>cacheKey</code> will be removed from the storage, otherwise not. In the function the <code>this.</code>-pointer can be used to access the class instance. In addition, all other passing parameters of the method to which the decorator is applied are also present (Exactly the same as with the <a href="#keyfunction">KeyFunction</a> or <a href="#clearlocalcache-combined-with-localcache">see samples</a>).</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="keyfunction"><code>KeyFunction</code><a class="headerlink" href="#keyfunction" title="Permanent link">&para;</a></h3>
+<hr />
+<p>This type is a <code>function</code> which expects a <code>string</code> as return value. In the function the <code>this.</code>-pointer can be used to access the class instance. In addition, all other passing parameters of the method to which the decorator is applied are also present</p>
+<p><table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Example with key as function</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">class</span> <span class="nx">MyExampleClass</span> <span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>    <span class="k">private</span> <span class="nx">cacheKey</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s1">&#39;getDummyDataPromise&#39;</span><span class="p">;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>    <span class="kd">@sessionCache</span><span class="p">({</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="hll">        <span class="nx">key</span><span class="o">:</span> <span class="p">(</span><span class="nx">param1</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">param2</span>: <span class="kt">number</span><span class="p">,</span> <span class="nx">paramN</span>: <span class="kt">any</span><span class="p">)</span><span class="o">:</span> <span class="kt">string</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span><a id="__codelineno-10-7" name="__codelineno-10-7"></a>            <span class="k">return</span> <span class="p">(</span><span class="k">this</span> <span class="kr">as</span> <span class="nx">MyExampleClass</span><span class="p">).</span><span class="nx">cacheKey</span><span class="p">;</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>        <span class="p">}</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>    <span class="p">})</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="hll">    <span class="k">public</span> <span class="nx">getDummyDataPromise</span><span class="p">(</span><span class="nx">param1</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">param2</span>: <span class="kt">number</span><span class="p">,</span> <span class="nx">paramN</span>: <span class="kt">any</span><span class="p">)</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span> <span class="p">{</span>
+</span><a id="__codelineno-10-11" name="__codelineno-10-11"></a>        <span class="k">return</span> <span class="ow">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a>            <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a>                <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="s2">&quot;This data is from 5s Promise&quot;</span><span class="p">;</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a>                <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a>            <span class="p">},</span> <span class="mf">5000</span><span class="p">);</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a>        <span class="p">});</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a>    <span class="p">}</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+As you can see in <code>line 6</code>, the parameters are the same as in the method (<code>line 10</code>). In <code>line 7</code> you can see how to access the current class instance.</p>
+<h3 id="decorator-examples">Decorator examples<a class="headerlink" href="#decorator-examples" title="Permanent link">&para;</a></h3>
+<hr />
+<h4 id="simple-local-cache-decorator-example">Simple local cache decorator example<a class="headerlink" href="#simple-local-cache-decorator-example" title="Permanent link">&para;</a></h4>
+<hr />
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Simple local cache decorator example</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">class</span> <span class="nx">MyExampleClass</span> <span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>    <span class="kd">@localCache</span><span class="p">({</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>        <span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;getDummyDataPromise&quot;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>    <span class="p">})</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>    <span class="k">public</span> <span class="nx">getDummyDataPromise</span><span class="p">(</span><span class="nx">param1</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">param2</span>: <span class="kt">number</span><span class="p">,</span> <span class="nx">paramN</span>: <span class="kt">any</span><span class="p">)</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span> <span class="p">{</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>        <span class="k">return</span> <span class="ow">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>            <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>                <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="s2">&quot;This data is from 5s Promise&quot;</span><span class="p">;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>                <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>            <span class="p">},</span> <span class="mf">5000</span><span class="p">);</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a>        <span class="p">});</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a>    <span class="p">}</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<h4 id="local-cache-decorator-with-key-prefix">Local cache decorator with key prefix<a class="headerlink" href="#local-cache-decorator-with-key-prefix" title="Permanent link">&para;</a></h4>
+<hr />
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Local cache decorator with key prefix</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">class</span> <span class="nx">MyExampleClass</span> <span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>    <span class="kd">@localCache</span><span class="p">({</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>        <span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;getDummyDataPromise&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>        <span class="nx">keyPrefix</span><span class="o">:</span> <span class="s1">&#39;HelloSPFx_&#39;</span> <span class="c1">// (1)</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>    <span class="p">})</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>    <span class="k">public</span> <span class="k">async</span> <span class="nx">getDummyDataPromise</span><span class="p">(</span><span class="nx">param1</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">param2</span>: <span class="kt">number</span><span class="p">,</span> <span class="nx">paramN</span>: <span class="kt">any</span><span class="p">)</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span> <span class="p">{</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>        <span class="k">return</span> <span class="k">await</span> <span class="nx">anyPromiseFunc</span><span class="p">(</span><span class="nx">param1</span><span class="p">,</span> <span class="nx">param2</span><span class="p">,</span> <span class="nx">paramN</span><span class="p">);</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>    <span class="p">}</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<ol>
+<li>The generated storage keys are <code>HelloSPFx_getDummyDataPromise</code> and <code>HelloSPFx_getDummyDataPromise_expire</code></li>
+</ol>
+<h4 id="assign-properties-to-class-via-sourceobj">Assign properties to class via <code>sourceObj</code><a class="headerlink" href="#assign-properties-to-class-via-sourceobj" title="Permanent link">&para;</a></h4>
+<hr />
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Assign properties to class via sourceObj</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span>
+<span class="normal"><a href="#__codelineno-13-24">24</a></span>
+<span class="normal"><a href="#__codelineno-13-25">25</a></span>
+<span class="normal"><a href="#__codelineno-13-26">26</a></span>
+<span class="normal"><a href="#__codelineno-13-27">27</a></span>
+<span class="normal"><a href="#__codelineno-13-28">28</a></span>
+<span class="normal"><a href="#__codelineno-13-29">29</a></span>
+<span class="normal"><a href="#__codelineno-13-30">30</a></span>
+<span class="normal"><a href="#__codelineno-13-31">31</a></span>
+<span class="normal"><a href="#__codelineno-13-32">32</a></span>
+<span class="normal"><a href="#__codelineno-13-33">33</a></span>
+<span class="normal"><a href="#__codelineno-13-34">34</a></span>
+<span class="normal"><a href="#__codelineno-13-35">35</a></span>
+<span class="normal"><a href="#__codelineno-13-36">36</a></span>
+<span class="normal"><a href="#__codelineno-13-37">37</a></span>
+<span class="normal"><a href="#__codelineno-13-38">38</a></span>
+<span class="normal"><a href="#__codelineno-13-39">39</a></span>
+<span class="normal"><a href="#__codelineno-13-40">40</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">class</span> <span class="nx">SimpleClassToConvert</span> <span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>    <span class="k">public</span> <span class="nx">prop1</span>: <span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>    <span class="k">public</span> <span class="nx">prop2</span>: <span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>    <span class="k">public</span> <span class="nx">prop3</span>: <span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>    <span class="k">public</span> <span class="nx">setDefaultProps</span><span class="p">()</span><span class="o">:</span> <span class="ow">void</span> <span class="p">{</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>        <span class="k">this</span><span class="p">.</span><span class="nx">prop1</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span><span class="p">;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>        <span class="k">this</span><span class="p">.</span><span class="nx">prop2</span> <span class="o">=</span> <span class="s2">&quot;SPFxAppDev&quot;</span><span class="p">;</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>        <span class="k">this</span><span class="p">.</span><span class="nx">prop3</span> <span class="o">=</span> <span class="mf">42</span><span class="p">;</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a>    <span class="p">}</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a>    <span class="k">public</span> <span class="nx">anotherFunc</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a>    <span class="p">}</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="p">}</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="kd">class</span> <span class="nx">MyConvertFromSourceSampleClass</span> <span class="p">{</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a>    <span class="kd">@localCache</span><span class="o">&lt;</span><span class="nx">SimpleClassToConvert</span><span class="o">&gt;</span><span class="p">({</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a>        <span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;MyConvertFromSourceSampleClass_getDummyDataPromise&quot;</span><span class="p">,</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a>        <span class="nx">sourceObj</span>: <span class="kt">SimpleClassToConvert</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a>    <span class="p">})</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a>    <span class="k">public</span> <span class="nx">getDummyDataPromise</span><span class="p">()</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">SimpleClassToConvert</span><span class="o">&gt;</span> <span class="p">{</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24"></a>        <span class="k">return</span> <span class="ow">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25"></a>            <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26"></a>                <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SimpleClassToConvert</span><span class="p">();</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27"></a>                <span class="nx">data</span><span class="p">.</span><span class="nx">setDefaultProps</span><span class="p">();</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28"></a>                <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29"></a>            <span class="p">},</span> <span class="mf">5000</span><span class="p">);</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30"></a>        <span class="p">});</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31"></a>
+<a id="__codelineno-13-32" name="__codelineno-13-32"></a>    <span class="p">}</span>
+<a id="__codelineno-13-33" name="__codelineno-13-33"></a><span class="p">}</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34"></a>
+<a id="__codelineno-13-35" name="__codelineno-13-35"></a><span class="kd">const</span> <span class="nx">convertFromSource</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">MyConvertFromSourceSampleClass</span><span class="p">();</span>
+<a id="__codelineno-13-36" name="__codelineno-13-36"></a><span class="p">(</span><span class="k">async</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-13-37" name="__codelineno-13-37"></a>
+<a id="__codelineno-13-38" name="__codelineno-13-38"></a>    <span class="kd">const</span> <span class="nx">simpleClassObj</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">convertFromSource</span><span class="p">.</span><span class="nx">getDummyDataPromise</span><span class="p">();</span>
+<a id="__codelineno-13-39" name="__codelineno-13-39"></a>    <span class="c1">//Working with the simpleClassObj... (1)</span>
+<a id="__codelineno-13-40" name="__codelineno-13-40"></a><span class="p">})();</span>
+</code></pre></div>
+</td></tr></table>
+<ol>
+<li>No matter if it comes from the cache or from the method, in both cases the object is returned with all methods and properties.</li>
+</ol>
+<h4 id="assign-properties-to-class-via-convertfromcache-method">Assign properties to class via <code>convertFromCache</code>-method<a class="headerlink" href="#assign-properties-to-class-via-convertfromcache-method" title="Permanent link">&para;</a></h4>
+<hr />
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Assign properties to class via convertFromCache-method</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span>
+<span class="normal"><a href="#__codelineno-14-19">19</a></span>
+<span class="normal"><a href="#__codelineno-14-20">20</a></span>
+<span class="normal"><a href="#__codelineno-14-21">21</a></span>
+<span class="normal"><a href="#__codelineno-14-22">22</a></span>
+<span class="normal"><a href="#__codelineno-14-23">23</a></span>
+<span class="normal"><a href="#__codelineno-14-24">24</a></span>
+<span class="normal"><a href="#__codelineno-14-25">25</a></span>
+<span class="normal"><a href="#__codelineno-14-26">26</a></span>
+<span class="normal"><a href="#__codelineno-14-27">27</a></span>
+<span class="normal"><a href="#__codelineno-14-28">28</a></span>
+<span class="normal"><a href="#__codelineno-14-29">29</a></span>
+<span class="normal"><a href="#__codelineno-14-30">30</a></span>
+<span class="normal"><a href="#__codelineno-14-31">31</a></span>
+<span class="normal"><a href="#__codelineno-14-32">32</a></span>
+<span class="normal"><a href="#__codelineno-14-33">33</a></span>
+<span class="normal"><a href="#__codelineno-14-34">34</a></span>
+<span class="normal"><a href="#__codelineno-14-35">35</a></span>
+<span class="normal"><a href="#__codelineno-14-36">36</a></span>
+<span class="normal"><a href="#__codelineno-14-37">37</a></span>
+<span class="normal"><a href="#__codelineno-14-38">38</a></span>
+<span class="normal"><a href="#__codelineno-14-39">39</a></span>
+<span class="normal"><a href="#__codelineno-14-40">40</a></span>
+<span class="normal"><a href="#__codelineno-14-41">41</a></span>
+<span class="normal"><a href="#__codelineno-14-42">42</a></span>
+<span class="normal"><a href="#__codelineno-14-43">43</a></span>
+<span class="normal"><a href="#__codelineno-14-44">44</a></span>
+<span class="normal"><a href="#__codelineno-14-45">45</a></span>
+<span class="normal"><a href="#__codelineno-14-46">46</a></span>
+<span class="normal"><a href="#__codelineno-14-47">47</a></span>
+<span class="normal"><a href="#__codelineno-14-48">48</a></span>
+<span class="normal"><a href="#__codelineno-14-49">49</a></span>
+<span class="normal"><a href="#__codelineno-14-50">50</a></span>
+<span class="normal"><a href="#__codelineno-14-51">51</a></span>
+<span class="normal"><a href="#__codelineno-14-52">52</a></span>
+<span class="normal"><a href="#__codelineno-14-53">53</a></span>
+<span class="normal"><a href="#__codelineno-14-54">54</a></span>
+<span class="normal"><a href="#__codelineno-14-55">55</a></span>
+<span class="normal"><a href="#__codelineno-14-56">56</a></span>
+<span class="normal"><a href="#__codelineno-14-57">57</a></span>
+<span class="normal"><a href="#__codelineno-14-58">58</a></span>
+<span class="normal"><a href="#__codelineno-14-59">59</a></span>
+<span class="normal"><a href="#__codelineno-14-60">60</a></span>
+<span class="normal"><a href="#__codelineno-14-61">61</a></span>
+<span class="normal"><a href="#__codelineno-14-62">62</a></span>
+<span class="normal"><a href="#__codelineno-14-63">63</a></span>
+<span class="normal"><a href="#__codelineno-14-64">64</a></span>
+<span class="normal"><a href="#__codelineno-14-65">65</a></span>
+<span class="normal"><a href="#__codelineno-14-66">66</a></span>
+<span class="normal"><a href="#__codelineno-14-67">67</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">class</span> <span class="nx">DataClassToConvert</span> <span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>    <span class="k">public</span> <span class="k">readonly</span> <span class="nx">id</span>: <span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>    <span class="k">public</span> <span class="nx">get</span> <span class="nx">isPublished</span><span class="p">()</span><span class="o">:</span> <span class="kt">boolean</span> <span class="p">{</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">version</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a>    <span class="p">}</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a>    <span class="k">public</span> <span class="nx">version</span>: <span class="kt">number</span><span class="p">;</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a>    <span class="k">private</span> <span class="kr">constructor</span><span class="p">(</span><span class="nx">id</span>: <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a>        <span class="k">this</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a>        <span class="k">this</span><span class="p">.</span><span class="nx">version</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a>    <span class="p">}</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a>    <span class="k">public</span> <span class="k">static</span> <span class="nx">ConvertFromCacheCollection</span><span class="p">(</span><span class="nx">cachedValue</span>: <span class="kt">any</span><span class="p">)</span><span class="o">:</span> <span class="nx">DataClassToConvert</span><span class="p">[]</span> <span class="p">{</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a>        <span class="kd">const</span> <span class="nx">resultValue</span>: <span class="kt">DataClassToConvert</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a>        <span class="p">(</span><span class="nx">cachedValue</span> <span class="kr">as</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="p">).</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">val</span>: <span class="kt">any</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a>
+<a id="__codelineno-14-20" name="__codelineno-14-20"></a>            <span class="kd">const</span> <span class="nx">instance</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">DataClassToConvert</span><span class="p">(</span><span class="nx">val</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21"></a>            <span class="p">(</span><span class="nb">Object</span> <span class="kr">as</span> <span class="nx">any</span><span class="p">).</span><span class="nx">assign</span><span class="p">(</span><span class="nx">instance</span><span class="p">,</span> <span class="nx">val</span><span class="p">);</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22"></a>            <span class="nx">resultValue</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">instance</span><span class="p">);</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23"></a>        <span class="p">});</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24"></a>
+<a id="__codelineno-14-25" name="__codelineno-14-25"></a>        <span class="k">return</span> <span class="nx">resultValue</span><span class="p">;</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26"></a>    <span class="p">}</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27"></a>
+<a id="__codelineno-14-28" name="__codelineno-14-28"></a>    <span class="k">public</span> <span class="k">static</span> <span class="nx">CreateDummyData</span><span class="p">()</span><span class="o">:</span> <span class="nx">DataClassToConvert</span><span class="p">[]</span> <span class="p">{</span>
+<a id="__codelineno-14-29" name="__codelineno-14-29"></a>        <span class="kd">const</span> <span class="nx">resultValue</span>: <span class="kt">DataClassToConvert</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
+<a id="__codelineno-14-30" name="__codelineno-14-30"></a>
+<a id="__codelineno-14-31" name="__codelineno-14-31"></a>        <span class="kd">const</span> <span class="nx">c1</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">DataClassToConvert</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">);</span>
+<a id="__codelineno-14-32" name="__codelineno-14-32"></a>        <span class="nx">resultValue</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">c1</span><span class="p">);</span>
+<a id="__codelineno-14-33" name="__codelineno-14-33"></a>
+<a id="__codelineno-14-34" name="__codelineno-14-34"></a>        <span class="kd">const</span> <span class="nx">c2</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">DataClassToConvert</span><span class="p">(</span><span class="s2">&quot;def&quot;</span><span class="p">);</span>
+<a id="__codelineno-14-35" name="__codelineno-14-35"></a>        <span class="nx">c2</span><span class="p">.</span><span class="nx">version</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
+<a id="__codelineno-14-36" name="__codelineno-14-36"></a>        <span class="nx">resultValue</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">c2</span><span class="p">);</span>       
+<a id="__codelineno-14-37" name="__codelineno-14-37"></a>
+<a id="__codelineno-14-38" name="__codelineno-14-38"></a>        <span class="k">return</span> <span class="nx">resultValue</span><span class="p">;</span>
+<a id="__codelineno-14-39" name="__codelineno-14-39"></a>    <span class="p">}</span>
+<a id="__codelineno-14-40" name="__codelineno-14-40"></a>
+<a id="__codelineno-14-41" name="__codelineno-14-41"></a><span class="p">}</span>
+<a id="__codelineno-14-42" name="__codelineno-14-42"></a>
+<a id="__codelineno-14-43" name="__codelineno-14-43"></a><span class="kd">class</span> <span class="nx">MyConvertFromCacheSampleClass</span> <span class="p">{</span>
+<a id="__codelineno-14-44" name="__codelineno-14-44"></a>
+<a id="__codelineno-14-45" name="__codelineno-14-45"></a>    <span class="kd">@localCache</span><span class="p">({</span>
+<a id="__codelineno-14-46" name="__codelineno-14-46"></a>        <span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;MyConvertFromCacheSampleClass_getDummyDataPromise&quot;</span><span class="p">,</span>
+<a id="__codelineno-14-47" name="__codelineno-14-47"></a>        <span class="nx">convertFromCache</span><span class="o">:</span> <span class="p">(</span><span class="nx">cachedValue</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-14-48" name="__codelineno-14-48"></a>            <span class="k">return</span> <span class="nx">DataClassToConvert</span><span class="p">.</span><span class="nx">ConvertFromCacheCollection</span><span class="p">(</span><span class="nx">cachedValue</span><span class="p">);</span>
+<a id="__codelineno-14-49" name="__codelineno-14-49"></a>        <span class="p">}</span>
+<a id="__codelineno-14-50" name="__codelineno-14-50"></a>    <span class="p">})</span>
+<a id="__codelineno-14-51" name="__codelineno-14-51"></a>    <span class="k">public</span> <span class="nx">getDummyDataPromise</span><span class="p">()</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">DataClassToConvert</span><span class="p">[]</span><span class="o">&gt;</span> <span class="p">{</span>
+<a id="__codelineno-14-52" name="__codelineno-14-52"></a>        <span class="k">return</span> <span class="ow">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-14-53" name="__codelineno-14-53"></a>            <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-14-54" name="__codelineno-14-54"></a>                <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">DataClassToConvert</span><span class="p">.</span><span class="nx">CreateDummyData</span><span class="p">();</span>
+<a id="__codelineno-14-55" name="__codelineno-14-55"></a>                <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-14-56" name="__codelineno-14-56"></a>            <span class="p">},</span> <span class="mf">5000</span><span class="p">);</span>
+<a id="__codelineno-14-57" name="__codelineno-14-57"></a>        <span class="p">});</span>
+<a id="__codelineno-14-58" name="__codelineno-14-58"></a>
+<a id="__codelineno-14-59" name="__codelineno-14-59"></a>    <span class="p">}</span>
+<a id="__codelineno-14-60" name="__codelineno-14-60"></a><span class="p">}</span>
+<a id="__codelineno-14-61" name="__codelineno-14-61"></a>
+<a id="__codelineno-14-62" name="__codelineno-14-62"></a><span class="kd">const</span> <span class="nx">convertFromCache</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">MyConvertFromCacheSampleClass</span><span class="p">();</span>
+<a id="__codelineno-14-63" name="__codelineno-14-63"></a><span class="p">(</span><span class="k">async</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-14-64" name="__codelineno-14-64"></a>
+<a id="__codelineno-14-65" name="__codelineno-14-65"></a>    <span class="kd">const</span> <span class="nx">dataClassToConvertObj</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">convertFromCache</span><span class="p">.</span><span class="nx">getDummyDataPromise</span><span class="p">();</span>
+<a id="__codelineno-14-66" name="__codelineno-14-66"></a>    <span class="c1">//Working with the dataClassToConvertObj... (1)</span>
+<a id="__codelineno-14-67" name="__codelineno-14-67"></a><span class="p">})();</span>
+</code></pre></div>
+</td></tr></table>
+<ol>
+<li>No matter if it comes from the cache or from the method, in both cases the object of type <code>DataClassToConvert</code> is returned with all methods and properties.</li>
+</ol>
+<h4 id="clear-session-cache">Clear session cache<a class="headerlink" href="#clear-session-cache" title="Permanent link">&para;</a></h4>
+<hr />
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Clear session cache</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">class</span> <span class="nx">MyExampleClass</span> <span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>    <span class="kd">@clearSessionCache</span><span class="p">({</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>        <span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;aKeyWithoutPrefix&quot;</span><span class="p">,</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>        <span class="nx">keyPrefix</span><span class="o">:</span> <span class="s1">&#39;&#39;</span> <span class="c1">// (1)</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a>    <span class="p">})</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>    <span class="k">public</span> <span class="nx">getDummyDataPromise</span><span class="p">(</span><span class="nx">param1</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">param2</span>: <span class="kt">number</span><span class="p">,</span> <span class="nx">paramN</span>: <span class="kt">any</span><span class="p">)</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span> <span class="p">{</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a>        <span class="k">return</span> <span class="k">await</span> <span class="nx">anyPromiseFunc</span><span class="p">(</span><span class="nx">param1</span><span class="p">,</span> <span class="nx">param2</span><span class="p">,</span> <span class="nx">paramN</span><span class="p">);</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a>    <span class="p">}</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<ol>
+<li>The "key prefix" is empty. This is useful if you want to remove a value from memory that has no prefix (for example from another application)</li>
+</ol>
+<h4 id="clearlocalcache-combined-with-localcache"><code>@clearLocalCache</code> combined with <code>@localCache</code><a class="headerlink" href="#clearlocalcache-combined-with-localcache" title="Permanent link">&para;</a></h4>
+<hr />
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">@clearLocalCache combined with @localCache</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span>
+<span class="normal"><a href="#__codelineno-16-14">14</a></span>
+<span class="normal"><a href="#__codelineno-16-15">15</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kd">class</span> <span class="nx">MyExampleClass</span> <span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>    <span class="kd">@clearLocalCache</span><span class="p">({</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>        <span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;myKey&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a>        <span class="nx">when</span><span class="o">:</span> <span class="p">(</span><span class="nx">param1</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">refreshCache</span>: <span class="kt">boolean</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>            <span class="k">return</span> <span class="nx">refreshCache</span><span class="p">;</span> <span class="c1">// (1)</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a>        <span class="p">}</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a>    <span class="p">})</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a>    <span class="kd">@localCache</span><span class="p">({</span> <span class="c1">// (2)</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a>        <span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;myKey&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a>    <span class="p">})</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a>    <span class="k">public</span> <span class="nx">getDummyDataPromise</span><span class="p">(</span><span class="nx">param1</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">refreshCache</span>: <span class="kt">boolean</span><span class="p">)</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span> <span class="p">{</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a>        <span class="k">return</span> <span class="k">await</span> <span class="nx">anyPromiseFunc</span><span class="p">(</span><span class="nx">param1</span><span class="p">,</span> <span class="nx">param2</span><span class="p">,</span> <span class="nx">paramN</span><span class="p">);</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a>    <span class="p">}</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<ol>
+<li>The parameters are the same as in the method (<code>line 12</code>). In the function the <code>this.</code>-pointer can be used to access the class instance</li>
+<li>The order is important. First you have to check if the cache should be cleared. Otherwise the <code>clearLocalCache</code> decorator will not be executed because the <code>localCache</code> method will not execute a method when returned value from the cache.</li>
+</ol>
 <h2 id="clear-storage-via-url-parameters">Clear storage via URL parameters<a class="headerlink" href="#clear-storage-via-url-parameters" title="Permanent link">&para;</a></h2>
 <hr />
+<p>Via the URL parameters the stored data can be deleted either completely or only certain ones. The names of the parameters are defined globally or per instance (see <a href="#5-custom-settings">custom settings</a>).</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Deleting via URL parameters only works if the cache has been called at least once on the page via the <code>get</code> method. For example, if only the <code>SessionStorage.get()</code> is used, then only <code>sessionStorage</code> will be cleared, but not <code>localStorage</code>. If nothing is used, then nothing is cleared. It is also applied only to the instances that use the same URL parameter configurations (<code>IStorageSettings.UrlParameter</code>) <strong>AND</strong> <code>keyPrefix</code>.</p>
+</div>
+<h3 id="delete-all-via-url">Delete all via URL<a class="headerlink" href="#delete-all-via-url" title="Permanent link">&para;</a></h3>
+<hr />
+<p>By default, the URL parameter <code>ResetCache</code> is used for both <code>LocalStorage</code> and <code>SessionStorage</code>. If you want to set another one, you have to override it (see <a href="#5-custom-settings">custom settings</a>).</p>
+<p>If you want to clear the complete cache, you have to specify the corresponding URL parameter. The following example refers to the default URL parameter <code>ResetCache</code>. The value of the parameter does not matter, it just has to be present in the URL </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>http://localhost:1234?ResetCache=1
+</code></pre></div>
+<h3 id="remove-only-specific-values-via-url">Remove only specific values via URL<a class="headerlink" href="#remove-only-specific-values-via-url" title="Permanent link">&para;</a></h3>
+<hr />
+<p>By default, the URL parameter <code>ResetOnly</code> is used for both <code>LocalStorage</code> and <code>SessionStorage</code>. If you want to set another one, you have to override it (see <a href="#5-custom-settings">custom settings</a>).</p>
+<p>If you want to clear a specific value, you have to specify the corresponding URL parameter. The following example refers to the default URL parameter <code>ResetOnly</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>http://localhost:1234?ResetOnly=mySessionStorageKey
+</code></pre></div>
+<p>You can delete multiple cached values by separating the keys with a comma</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>http://localhost:1234?ResetOnly=mySessionStorageKey,myLocalStorageKey
+</code></pre></div>
 
               
             </article>
